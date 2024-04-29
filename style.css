@@ -1,0 +1,108 @@
+/* 
+## Colors
+
+### Primary
+
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+
+### Neutral
+
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px
+
+### Font
+
+- Family: [Red Hat Display](https://fonts.google.com/specimen/Red+Hat+Display)
+- Weights: 500, 700, 900 
+*/
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  background: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: var(--pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  border-radius: 10px 10px 0 0;
+  max-width: 450px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  border-radius: 10px;
+  background-color: white;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.description {
+  text-align: center;
+}
+
+.plan-section {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  min-width: 100%;
+}

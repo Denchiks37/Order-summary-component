@@ -16,7 +16,7 @@
 
 ### Body Copy
 
-- Font size (paragraph): 16px
+- Font size (paragraph): 1rem
 
 ### Font
 
@@ -54,6 +54,7 @@ body {
 body {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 500;
+  line-height: 1.5;
   background: url(images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-color: var(--pale-blue);
@@ -63,19 +64,20 @@ body {
 }
 
 img {
-  border-radius: 10px 10px 0 0;
-  max-width: 450px;
+  border-radius: 0.625rem 0.625rem 0 0;
+  max-width: 28.125rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  max-width: 450px;
-  border-radius: 10px;
+  max-width: 28.125rem;
+  border-radius: 0.625rem;
   background-color: white;
-  gap: 32px;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0rem 0.4375rem 1.8125rem 0rem;
 }
 
 .card-text {
@@ -83,26 +85,84 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 1.5rem;
+  max-width: 21.875rem;
+}
+
+.title h2 {
+  color: var(--dark-blue);
+  font-weight: 900;
+  font-size: 1.875rem;
 }
 
 .description {
   text-align: center;
+  color: var(--desaturated-blue);
 }
 
 .plan-section {
   display: flex;
-  gap: 16px;
-  justify-content: center;
+  gap: 1rem;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--very-pale-blue);
-  padding: 16px;
-  border-radius: 10px;
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  width: 100%;
+}
+
+.plan-section .plan {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.plan-change:active,
+.plan-change:visited {
+  color: var(--bright-blue);
+}
+
+.plan-change p {
+  font-weight: 900;
+  font-size: 0.875rem;
+}
+
+.price {
+  color: var(--desaturated-blue);
 }
 
 .btn {
   display: flex;
   flex-direction: column;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
   min-width: 100%;
+  gap: 1rem;
+}
+
+button {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 1rem 0;
+}
+
+.blue-btn {
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+  font-weight: 700;
+  font-size: 0.875rem;
+  box-shadow: hsl(245, 75%, 52%) 0rem 0.125rem 0.5rem 0rem;
+}
+
+.transparent-btn {
+  background-color: white;
+  color: var(--desaturated-blue);
+  font-weight: 700;
+  font-size: 0.875rem;
 }
